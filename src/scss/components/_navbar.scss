@@ -1,0 +1,52 @@
+.navbar {
+  &__nav {
+    display: flex;
+    line-height: 1;
+  }
+  &__link {
+    padding: 3rem;
+    display: block;
+    line-height: 1.5rem;
+    font-family: 'Manrope', 'Arial', 'sans-serif', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #bfbfbf;
+    transition: color .3s;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &__item:has(&__subnav) {
+    position: relative;
+    &:hover {
+      .navbar__subnav {
+        display: block;
+      }
+    }
+  }
+  &__subnav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    line-height: 1;
+    display: none;
+    li {
+      a {
+        white-space: nowrap;
+        background-color: #000;
+        text-decoration: none;
+        font-family: 'Manrope', 'Arial', 'sans-serif', sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        color: #7d7d7d;
+        padding: 1.2rem 2rem;
+        display: block;
+        transition: background-color .2s, color .2s;
+        &:hover {
+          background-color: var(--color-primary);
+          color: #000;
+        }
+      }
+    }
+  }
+}

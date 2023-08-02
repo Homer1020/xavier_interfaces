@@ -1,0 +1,105 @@
+.main-slider {
+  .swiper {
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    &-slide {
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &-slide {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #00000050;
+        z-index: -1;
+      }
+    }
+  }
+  &__container {
+    padding-left: 250px;
+  }
+  &__next,
+  &__prev {
+    position: absolute;
+    top: 0;
+    z-index: 50;
+    height: 100%;
+    text-transform: uppercase;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: {
+      property: background-color, backdrop-filter, border-color;
+      duration: .2s;
+    }
+    z-index: var(--z-middle);
+    &:hover {
+      background-color: rgba(#ffffff, .05);
+      backdrop-filter: blur(5px);
+      border-color: rgba(#fff, .5);
+    }
+    p {
+      transform: rotate(-90deg);
+      user-select: none;
+      font-size: 12px;
+      color: #fff;
+      letter-spacing: 2px;
+      font-weight: 500;
+      font-family: 'Numans', sans-serif;
+    }
+  }
+  &__prev {
+    border-right: 1px solid transparent;
+    left: 0;
+  }
+  &__next {
+    border-left: 1px solid rgba(#fff, .1);
+    right: 0;
+  }
+
+  &__title {
+    z-index: 5;
+    font-family: Montserrat;
+    color: rgb(255, 255, 255);
+    letter-spacing: -1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 15rem;
+  }
+
+  &__text {
+    font-size: 1.3rem;
+    color: rgba(#fff, .5);
+    text-transform: uppercase;
+    span {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 0.5rem;
+    }
+    &--active {
+      color: rgba(#fff, 1);
+    }
+    &--big {
+      font-size: 2.8rem;
+      transform: translateY(-.5rem);
+    }
+  }
+
+  &__bottom-text {
+    display: flex;
+    margin-top: 6rem;
+    p:first-child {
+      margin-right: 5rem;
+    }
+  }
+}
