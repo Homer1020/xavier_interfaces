@@ -47,3 +47,32 @@ const handleSetBgHeader = () => {
 
 handleSetBgHeader()
 window.addEventListener('scroll', handleSetBgHeader)
+
+/**
+ * TABS
+ */
+const swiperTabs = new Swiper('.swiper--tabs', {
+	effect: "creative",
+	creativeEffect: {
+		prev: {
+			translate: ["100%", 0, -1]
+		},
+		next: {
+			translate: ["100%", 0, 0],
+		},
+	},
+	autoHeight: true
+})
+
+const $iconsNav = document.querySelector('.icons-nav')
+if($iconsNav) {
+	$iconsNav.addEventListener('click', e => {
+		if(e.target.classList.contains('icons-nav__item')) {
+			e.preventDefault()
+			const index = +e.target.getAttribute('href').replace('#', '')
+			swiperTabs.slideTo(index)
+			$iconsNav.querySelector('.icons-nav__item--active').classList.remove('icons-nav__item--active')
+			e.target.classList.add('icons-nav__item--active')
+		}
+	})
+}

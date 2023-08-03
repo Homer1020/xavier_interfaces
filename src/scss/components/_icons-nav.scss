@@ -1,0 +1,29 @@
+.icons-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__item {
+    & > * {
+      pointer-events: none;
+    }
+    text-align: center;
+    color: #333;
+    display: block;
+    padding: 0 2.5rem;
+    &--active {
+      color: var(--color-primary)
+    }
+    span {
+      font-size: 4.5rem;
+      display: block;
+      margin-bottom: 2.1rem;
+    }
+    p {
+      color: inherit;
+      text-transform: uppercase;
+      font-family: Hind, Arial;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+  }
+}
