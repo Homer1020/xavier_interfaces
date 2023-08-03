@@ -1,0 +1,19 @@
+.stats {
+  padding: 3.7rem 0;
+  &__value {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+  }
+  &__var {
+    letter-spacing: 1px;
+    margin: 0;
+    color: rgba(255,255,255,0.5);
+    font-family: 'Lato';
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+}
