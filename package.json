@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"pug -w src/views/pages -o dist\" \"sass -w src/scss/style.scss dist/css/style.css\""
+    "start": "concurrently \"pug -w src/views/pages -o dist\" \"sass -w src/scss/style.scss dist/css/style.css --style=compressed\""
   },
   "keywords": [],
   "author": "",
