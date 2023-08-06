@@ -3,4 +3,12 @@
   background-position: center;
   background-size: cover;
   color: #fff;
+  &__title {
+    font-weight: 800;
+    font-size: 6rem;
+    color: #f4f4f4;
+    line-height: 1.3em;
+    text-align: center;
+    font-family: 'Montserrat', 'Arial', 'sans-serif';
+  }
 }

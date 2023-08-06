@@ -3,6 +3,7 @@
 
 @import 'layouts/container';
 @import 'layouts/l-section';
+@import 'layouts/l-masonry-fake';
 
 @import 'components/main-slider';
 @import 'components/site-header';
@@ -15,3 +16,6 @@
 @import 'components/site-footer';
 @import 'components/figure';
 @import 'components/cards-slider';
+@import 'components/parallax-banner';
+@import 'components/figicon';
+@import 'components/info-card';
