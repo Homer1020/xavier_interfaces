@@ -1,0 +1,19 @@
+.cards-slider {
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-bottom: 3rem;
+    &-next,
+    &-prev {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      background-color: #ccc;
+      text-align: center;
+      line-height: 3rem;
+      color: #fff;
+      user-select: none;
+    }
+  }
+}

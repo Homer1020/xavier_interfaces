@@ -76,3 +76,15 @@ if($iconsNav) {
 		}
 	})
 }
+
+/**
+ * CARDS SLIDER
+ */
+const cardsSlider = new Swiper('.cards-slider', {
+	slidesPerView: 2,
+	spaceBetween: 30,
+	navigation: {
+    nextEl: '.cards-slider__buttons-next',
+    prevEl: '.cards-slider__buttons-prev',
+  },
+})

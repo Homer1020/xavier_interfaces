@@ -58,7 +58,8 @@ block content
                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ex nulla doloremque odio at aliquam, soluta necessitatibus commodi facere? Odit eveniet at excepturi ab error. Ut cupiditate quam aut temporibus.
                 a.button.button--default(href="#" style="margin-top: 2rem;") Get Hazel today
               .col-md-6
-                img(src="/images/videoediting.jpg", alt="Video Editing")
+                .px-5
+                  img(src="/images/videoediting.jpg", alt="Video Editing")
           .swiper-slide
             .row
               .col-md-6
@@ -67,13 +68,14 @@ block content
                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ex nulla doloremque odio at aliquam, soluta necessitatibus commodi facere? Odit eveniet at excepturi ab error. Ut cupiditate quam aut temporibus.
                 a.button.button--default(href="#" style="margin-top: 2rem;") Purchase Hazel
               .col-md-6
-                img(src="/images/illustrations.jpg", alt="Video Editing")
+                .px-5
+                  img(src="/images/illustrations.jpg", alt="Video Editing")
           .swiper-slide
             .row  
-              .col-md-6
+              .col-md-6.pe-5
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur qui. A mollitia rerum incidunt. Libero eius alias amet, perspiciatis laborum explicabo possimus iure sed eligendi fuga soluta commodi adipisci?
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur qui. A mollitia rerum incidunt. Libero eius alias amet, perspiciatis laborum explicabo possimus iure sed eligendi fuga soluta commodi adipisci?
-              .col-md-6
+              .col-md-6.ps-5
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur qui. A mollitia rerum incidunt. Libero eius alias amet, perspiciatis laborum explicabo possimus iure sed eligendi fuga soluta commodi adipisci?
   section.banner(style="background-image: url(\"https://preview.treethemes.com/hazel/demo15/wp-content/uploads/sites/32/revslider/portfolio-showreel/moon-new_138.jpeg\")")
     .container
@@ -91,15 +93,45 @@ block content
             p.stats__value 391
             p.stats__var OUR TEAM MEMBER
   section.l-section.section.section--separators
-    .container-fluid
+    .container-fluid(style="margin-top: 5rem")
       .row
-        .col-md-6 
-          h2.section__title 
-            |We explore.
-            br
-            |We innovate.
-          p Our projects, all of which are unique, encompass contextual analysis, formal design, a sense of uses, an original approach to materials, pleasure in construction, new itineraries in the city, and a reinvention of urban situations.
-          a.button.button--default(href="#" style="margin-top: 5rem;") View all Projects
-        .col-md-6 
+        .col-md-6.p-0 
+          .ultra-context-box(style="padding: 9rem") 
+            h2.section__title 
+              |We explore.
+              br
+              |We innovate.
+            p Our projects, all of which are unique, encompass contextual analysis, formal design, a sense of uses, an original approach to materials, pleasure in construction, new itineraries in the city, and a reinvention of urban situations.
+            a.button.button--default(href="#" style="margin-top: 5rem;") View all Projects
+        .col-md-6.p-0 
+          .swiper.cards-slider
+            .cards-slider__buttons
+              .cards-slider__buttons-prev
+                span.lnr.lnr-chevron-left
+              .cards-slider__buttons-next
+                span.lnr.lnr-chevron-right
+            .swiper-wrapper
+              // Slides
+              .swiper-slide
+                figure.figure
+                  .figure__image 
+                    img(src="/images/imac.jpg", alt="Imagen de prueba")
+                  figcaption.figure__caption 
+                    h3 Apple iMac
+                    p Web design / Graphic
+              .swiper-slide
+                figure.figure
+                  .figure__image 
+                    img(src="/images/imac.jpg", alt="Imagen de prueba")
+                  figcaption.figure__caption 
+                    h3 Apple iMac
+                    p Web design / Graphic
+              .swiper-slide
+                figure.figure
+                  .figure__image 
+                    img(src="/images/imac.jpg", alt="Imagen de prueba")
+                  figcaption.figure__caption 
+                    h3 Apple iMac
+                    p Web design / Graphic
 block prepend scripts 
   script(src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js")
