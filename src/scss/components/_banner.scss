@@ -11,4 +11,20 @@
     text-align: center;
     font-family: 'Montserrat', 'Arial', 'sans-serif';
   }
+  &--dark {
+    position: relative;
+    & > * {
+      z-index: 2;
+    }
+    &::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, .6);
+      position: absolute;
+    }
+  }
 }

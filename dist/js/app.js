@@ -88,3 +88,22 @@ const cardsSlider = new Swiper('.cards-slider', {
     prevEl: '.cards-slider__buttons-prev',
   },
 })
+
+/**
+ * GOTOTOP BUTTON
+ */
+const $gototop = document.getElementById('gototop')
+window.addEventListener('scroll', () => {
+	if(scrollY > 90) {
+		$gototop.classList.add('gototop--visible')
+	} else {
+		$gototop.classList.remove('gototop--visible')
+	}
+})
+
+$gototop.addEventListener('click', () => {
+	window.scrollTo({
+		behavior: 'smooth',
+		top: 0
+	})
+})
