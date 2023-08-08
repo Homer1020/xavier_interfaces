@@ -107,3 +107,13 @@ $gototop.addEventListener('click', () => {
 		top: 0
 	})
 })
+
+/**
+ * NAVBAR
+ */
+const $navbarToggle = document.getElementById('navbar-toggle')
+const $navbar = document.getElementById('navbar')
+
+$navbarToggle.addEventListener('click', () => {
+	$navbar.classList.toggle('navbar--show')
+})
