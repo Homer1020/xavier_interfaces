@@ -1,11 +1,43 @@
 footer.site-footer 
   .container 
     .row 
-      .col-md-3 
+      .col-md-3.site-footer__col 
         img(src="/images/logodemo.png", alt="Logo")
-      .col-md-3 
-        h3 Office
-      .col-md-3 
-        h3 Quick links
-      .col-md-3 
-        h3 Follow us
+      .col-md-3.site-footer__col 
+        h3.site-footer__title Office
+        p.site-footer__text PO Box 16122 Collins Street
+          |West Victoria 8007
+          |Australia
+        p.site-footer__text 
+          a(href="mailto:homermoncallo@gmail.com") homermoncallo@gmail.com
+        p.site-footer__text (+23) 345 322 233
+      .col-md-3.site-footer__col 
+        h3.site-footer__title Quick links
+        ul.site-footer__list 
+          li
+            a(href="#") 
+              i.fa.fa-home 
+              |Hazel Demos Page
+          li
+            a(href="#") 
+              i.far.fa-heart 
+              |Hazel Main Demo
+          li
+            a(href="#") 
+              i.fa.fa-shopping-cart 
+              |Purchase theme
+      .col-md-3.site-footer__col 
+        h3.site-footer__title Follow us
+        .site-footer__socials 
+          a(href="#") 
+            i.fab.fa-twitter
+          a(href="#") 
+            i.fab.fa-instagram
+          a(href="#") 
+            i.fab.fa-dribbble
+          a(href="#") 
+            i.fab.fa-tiktok
+          a(href="#") 
+            i.fab.fa-facebook
+.site-footer__bottom 
+  p.m-0.text-center Hazel © 2022 by TreeThemes

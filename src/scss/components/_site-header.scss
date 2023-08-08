@@ -5,6 +5,10 @@
   width: 100%;
   z-index: var(--z-front);
   transition: background-color .3s, transform .3s;
+  padding: 2rem 0;
+  @media (min-width: map-get($screenSizes, 'md')) {
+    padding: 0;
+  }
   &__container {
     width: 100%;
     padding: 0 3rem;
@@ -31,7 +35,11 @@
     align-items: center;
 
     .button {
-      margin-left: 7rem;
+      margin-left: 6rem;
+      display: none;
+      @media (min-width: map-get($screenSizes, 'sm')) {
+        display: block;
+      }
     }
   }
 }

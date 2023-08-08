@@ -1,0 +1,16 @@
+.figicon {
+  text-align: center;
+  &__icon {
+    color: #000000;
+    font-size: 7rem;
+    margin-bottom: 2.2rem;
+    display: block;
+  }
+  &__header {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: #000000;
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+  }
+}

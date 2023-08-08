@@ -1,0 +1,58 @@
+.info-card {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .3;
+    transition: opacity .3s;
+  }
+  &:hover {
+    &::before {
+      opacity: .7;
+    }
+    .info-card__info {
+      transform: translateY(0);
+    }
+    .info-card__links {
+      transform: translateY(0);
+    }
+  }
+  &__info {
+    transition: transform .3s;
+    transform: translateY(4rem);
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &__title {
+    font-family: Montserrat;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+  }
+  &__description {
+    font-family: Lato;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5) !important;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem !important;
+  }
+  &__links {
+    display: flex;
+    transform: translateY(5rem);
+    transition: transform .3s .1s;
+  }
+  &__link {
+    display: block;
+    font-size: 1.6rem;
+    margin-right: 1rem;
+    color: rgb(255, 255, 255);
+  }
+}

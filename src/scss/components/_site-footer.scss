@@ -1,6 +1,65 @@
 .site-footer {
   background-color: #000;
   color: #989696;
-  padding-top: 7rem;
-  padding-bottom: 4rem;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+  &__title {
+    font-family: 'Montserrat', 'Arial', 'sans-serif';
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-bottom: 4rem;
+  }
+  &__text {
+    line-height: 1.7;
+    font-family: 'Numans', 'Arial', 'sans-serif';
+    font-size: 1.4rem;
+    a {
+      color: inherit;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 1.3rem 0;
+      border-top: 1px solid #1a1a1a;
+      font-family: 'Numans', 'Arial', 'sans-serif';
+      font-size: 1.4rem;
+      border-bottom: 1px solid #1a1a1a;
+      a {
+        color: inherit;
+        i {
+          font-size: 1.2rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+  &__socials {
+    display: flex;
+    a {
+      display: block;
+      color: #fff;
+      font-size: 2.2rem;
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+    }
+  }
+  &__bottom {
+    padding: 4rem 0;
+    font-family: 'Montserrat', 'Arial', 'sans-serif !important';
+    font-weight: normal !important;
+    font-size: 13px !important;
+    color: #303030 !important
+  }
+  &__col {
+    padding-left: 4rem;
+  }
 }

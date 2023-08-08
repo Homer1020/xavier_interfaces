@@ -1,0 +1,24 @@
+.gototop {
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  background: rgba(0,0,0,.2);
+  border: none;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: var(--z-front);
+  opacity: 0;
+  transition: .3s opacity;
+  &--visible {
+    opacity: 1;
+  }
+  i {
+    color: #fff;
+    font-size: 16px;
+  }
+}
