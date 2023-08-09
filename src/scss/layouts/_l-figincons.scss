@@ -1,0 +1,8 @@
+.l-figicons {
+  .figicon {
+    margin-bottom: 6rem;
+    @media (min-width: map-get($screenSizes, 'b:sm')) {
+      margin-bottom: 0;
+    }
+  }
+}

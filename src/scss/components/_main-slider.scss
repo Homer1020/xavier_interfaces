@@ -116,10 +116,15 @@
   }
 
   &__bottom-text {
-    display: flex;
-    margin-top: 6rem;
-    p:first-child {
-      margin-right: 5rem;
+    margin-top: 3rem;
+    p { margin-bottom: .3rem !important };
+    @media (min-width: map-get($screenSizes, 'md')) {
+      display: flex;
+      margin-top: 6rem;
+      p:first-child {
+        margin-right: 5rem;
+        margin-bottom: 0;
+      }
     }
   }
 }

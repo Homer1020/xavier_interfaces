@@ -81,8 +81,11 @@ if($iconsNav) {
  * CARDS SLIDER
  */
 const cardsSlider = new Swiper('.cards-slider', {
-	slidesPerView: 2,
-	spaceBetween: 30,
+	breakpoints: {
+		992: {
+			slidesPerView: 2,
+		}
+	},
 	navigation: {
     nextEl: '.cards-slider__buttons-next',
     prevEl: '.cards-slider__buttons-prev',

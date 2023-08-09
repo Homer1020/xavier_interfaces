@@ -43,6 +43,10 @@
   }
   &__socials {
     display: flex;
+    justify-content: center;
+    @media (min-width: map-get($screenSizes, 'md')) {
+      justify-content: flex-start;
+    }
     a {
       display: block;
       color: #fff;
@@ -60,6 +64,14 @@
     color: #303030 !important
   }
   &__col {
-    padding-left: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    @media (min-width: map-get($screenSizes, 'sm')) {
+      text-align: left;
+    }
+    @media (min-width: map-get($screenSizes, 'md')) {
+      margin-bottom: 0;
+      padding-left: 4rem;
+    }
   }
 }

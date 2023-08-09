@@ -1,9 +1,13 @@
 .l-masonry-fake {
-  margin-bottom: 7rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
-  & > *:nth-child(odd) {
-    transform: translateY(7rem);
+  margin-top: 7rem;
+  @media (min-width: map-get($screenSizes, 'md')) {
+    margin-bottom: 7rem;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    & > *:nth-child(odd) {
+      transform: translateY(7rem);
+    }
   }
 }

@@ -1,0 +1,6 @@
+.ultra-content-box {
+  padding: 0 2rem;
+  @media (min-width: map-get($screenSizes, 'md')) {
+    padding: 9rem;
+  }
+}
