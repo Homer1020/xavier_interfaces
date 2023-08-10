@@ -138,7 +138,10 @@ const $navItemsHasSubNav = document.querySelectorAll('.navbar__item--with-subnav
 
 $navItemsHasSubNav.forEach($item => {
 	$item.addEventListener('click', e => {
-		e.preventDefault()
+		// RESPONSIVE IN JS 💕
+		if(matchMedia('(max-width: 993px)').matches) {
+			e.preventDefault()
+		}
 		if(e.target.classList.contains('back')) {
 			$item.classList.remove('active')
 			$navbar.classList.remove('subnav-active')
