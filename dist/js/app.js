@@ -38,10 +38,12 @@ let scrollPos = 0
 const handleSetBgHeader = () => {
 	if(scrollY > 40) {
 		$siteHeader.classList.add('site-header--fixed');
-		if ((document.body.getBoundingClientRect()).top > scrollPos)
+		if ((document.body.getBoundingClientRect()).top > scrollPos) {
 			$siteHeader.classList.remove('show')
-		else
+		} else {
 			$siteHeader.classList.add('show')
+			document.querySelector('.navbar.navbar--show')?.classList?.remove('navbar--show')
+		}
   	scrollPos = (document.body.getBoundingClientRect()).top;
 	} else {
 		$siteHeader.classList.remove('site-header--fixed');
@@ -136,6 +138,7 @@ const $navItemsHasSubNav = document.querySelectorAll('.navbar__item--with-subnav
 
 $navItemsHasSubNav.forEach($item => {
 	$item.addEventListener('click', e => {
+		e.preventDefault()
 		if(e.target.classList.contains('back')) {
 			$item.classList.remove('active')
 			$navbar.classList.remove('subnav-active')
