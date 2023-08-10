@@ -138,14 +138,10 @@ const $navItemsHasSubNav = document.querySelectorAll('.navbar__item--with-subnav
 
 $navItemsHasSubNav.forEach($item => {
 	$item.addEventListener('click', e => {
-<<<<<<< HEAD
 		// RESPONSIVE IN JS 💕
 		if(matchMedia('(max-width: 993px)').matches) {
 			e.preventDefault()
 		}
-=======
-		e.preventDefault()
->>>>>>> 0cc620944a76d0f505ee2ce006e7a5a427b13270
 		if(e.target.classList.contains('back')) {
 			$item.classList.remove('active')
 			$navbar.classList.remove('subnav-active')
@@ -155,3 +151,5 @@ $navItemsHasSubNav.forEach($item => {
 		$navbar.classList.add('subnav-active')
 	})
 })
+
+console.log('By: Homer Moncayo')
