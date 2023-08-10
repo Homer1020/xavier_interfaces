@@ -3,13 +3,19 @@ header#site-header.site-header
     a(href="/").brand 
       img(src="/images/logo.png", alt="Logo")
     .site-header__right
-      nav.navbar#navbar 
-        ul.navbar__nav 
+      nav.navbar#navbar.p-0
+        ul.navbar__nav.m-0 
           li.navbar__item 
-            a.navbar__link(href="#") home.
-          li.navbar__item
-            a.navbar__link(href="#") pages.
+            a.navbar__link(href="/") home.
+          li.navbar__item.navbar__item--with-subnav
+            a.navbar__link(href="#")
+              span pages.
+              i.fa.fa-angle-right
             ul.navbar__subnav 
+              li
+                a.back(href="#")
+                  i.fa.fa-angle-left
+                  span BACK
               li
                 a(href="/about.html") About us
               li

@@ -1,30 +1,33 @@
-const $mainSliderIndexs = Array.from(document.querySelectorAll('.main-slider__text--big'))
-const mainSlider = new Swiper('#main-slider .swiper', {
-	effect: "creative",
-	creativeEffect: {
-		prev: {
-			translate: ["-20%", 0, -1]
+if(document.querySelector('#main-slider')) {
+	const $mainSliderIndexs = Array.from(document.querySelectorAll('.main-slider__text--big'))
+	const mainSlider = new Swiper('#main-slider .swiper', {
+		effect: "creative",
+		creativeEffect: {
+			prev: {
+				translate: ["-20%", 0, -1]
+			},
+			next: {
+				translate: ["100%", 0, 0],
+			},
 		},
-		next: {
-			translate: ["100%", 0, 0],
+		navigation: {
+			nextEl: '.main-slider__next',
+			prevEl: '.main-slider__prev',
 		},
-	},
-	navigation: {
-    nextEl: '.main-slider__next',
-    prevEl: '.main-slider__prev',
-  },
-	// loop: true
-})
-
-const handleSlideChange = () => {
-	const { activeIndex } = mainSlider
-	$mainSliderIndexs.map(e => {
-		e.textContent= activeIndex + 1
+		// loop: true
 	})
-}
 
-handleSlideChange()
-mainSlider.on('activeIndexChange', handleSlideChange)
+	const handleSlideChange = () => {
+		const { activeIndex } = mainSlider
+		$mainSliderIndexs.map(e => {
+			e.textContent= activeIndex + 1
+		})
+	}
+
+	handleSlideChange()
+	mainSlider.on('activeIndexChange', handleSlideChange)
+
+}
 
 /**
  * SITE HEADER
@@ -51,46 +54,50 @@ window.addEventListener('scroll', handleSetBgHeader)
 /**
  * TABS
  */
-const swiperTabs = new Swiper('.swiper--tabs', {
-	effect: "creative",
-	creativeEffect: {
-		prev: {
-			translate: ["100%", 0, -1]
+if(document.querySelector('.swiper--tabs')) {
+	const swiperTabs = new Swiper('.swiper--tabs', {
+		effect: "creative",
+		creativeEffect: {
+			prev: {
+				translate: ["100%", 0, -1]
+			},
+			next: {
+				translate: ["100%", 0, 0],
+			},
 		},
-		next: {
-			translate: ["100%", 0, 0],
-		},
-	},
-	autoHeight: true
-})
-
-const $iconsNav = document.querySelector('.icons-nav')
-if($iconsNav) {
-	$iconsNav.addEventListener('click', e => {
-		if(e.target.classList.contains('icons-nav__item')) {
-			e.preventDefault()
-			const index = +e.target.getAttribute('href').replace('#', '')
-			swiperTabs.slideTo(index)
-			$iconsNav.querySelector('.icons-nav__item--active').classList.remove('icons-nav__item--active')
-			e.target.classList.add('icons-nav__item--active')
-		}
+		autoHeight: true
 	})
+	
+	const $iconsNav = document.querySelector('.icons-nav')
+	if($iconsNav) {
+		$iconsNav.addEventListener('click', e => {
+			if(e.target.classList.contains('icons-nav__item')) {
+				e.preventDefault()
+				const index = +e.target.getAttribute('href').replace('#', '')
+				swiperTabs.slideTo(index)
+				$iconsNav.querySelector('.icons-nav__item--active').classList.remove('icons-nav__item--active')
+				e.target.classList.add('icons-nav__item--active')
+			}
+		})
+	}
 }
 
 /**
  * CARDS SLIDER
  */
-const cardsSlider = new Swiper('.cards-slider', {
-	breakpoints: {
-		992: {
-			slidesPerView: 2,
-		}
-	},
-	navigation: {
-    nextEl: '.cards-slider__buttons-next',
-    prevEl: '.cards-slider__buttons-prev',
-  },
-})
+if(document.querySelector('.cards-slider')) {
+	const cardsSlider = new Swiper('.cards-slider', {
+		breakpoints: {
+			992: {
+				slidesPerView: 2,
+			}
+		},
+		navigation: {
+			nextEl: '.cards-slider__buttons-next',
+			prevEl: '.cards-slider__buttons-prev',
+		},
+	})
+}
 
 /**
  * GOTOTOP BUTTON
@@ -119,4 +126,22 @@ const $navbar = document.getElementById('navbar')
 
 $navbarToggle.addEventListener('click', () => {
 	$navbar.classList.toggle('navbar--show')
+})
+
+/**
+ * MINI NAVIGATION
+ * (this code can be optimizated with propagation events)
+ */
+const $navItemsHasSubNav = document.querySelectorAll('.navbar__item--with-subnav')
+
+$navItemsHasSubNav.forEach($item => {
+	$item.addEventListener('click', e => {
+		if(e.target.classList.contains('back')) {
+			$item.classList.remove('active')
+			$navbar.classList.remove('subnav-active')
+			return null // 💕
+		}
+		$item.classList.add('active')
+		$navbar.classList.add('subnav-active')
+	})
 })

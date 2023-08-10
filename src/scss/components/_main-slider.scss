@@ -45,7 +45,7 @@
     cursor: pointer;
     padding: 1.5rem;
     @media (min-width: map-get($screenSizes, 'md')) {
-      padding: 4rem;
+      padding: 3rem;
     }
     transition: {
       property: background-color, backdrop-filter, border-color;
