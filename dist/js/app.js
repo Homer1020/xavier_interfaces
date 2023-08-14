@@ -90,13 +90,17 @@ if(document.querySelector('.swiper--tabs')) {
 if(document.querySelector('.cards-slider')) {
 	const cardsSlider = new Swiper('.cards-slider', {
 		breakpoints: {
+			0: {
+				spaceBetween: 20,
+			},
 			992: {
+				spaceBetween: 30,
 				slidesPerView: 2,
+				navigation: {
+					nextEl: '.cards-slider__buttons-next',
+					prevEl: '.cards-slider__buttons-prev',
+				},
 			}
-		},
-		navigation: {
-			nextEl: '.cards-slider__buttons-next',
-			prevEl: '.cards-slider__buttons-prev',
 		},
 	})
 }

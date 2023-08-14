@@ -3,6 +3,9 @@
   color: #989696;
   padding-top: 8rem;
   padding-bottom: 6rem;
+  a {
+    transition: color .3s;
+  }
   &__title {
     font-family: 'Montserrat', 'Arial', 'sans-serif';
     font-weight: 800;
@@ -34,6 +37,9 @@
       border-bottom: 1px solid #1a1a1a;
       a {
         color: inherit;
+        &:hover {
+          color: #fff;
+        }
         i {
           font-size: 1.2rem;
           margin-right: 1rem;
@@ -51,6 +57,9 @@
       display: block;
       color: #fff;
       font-size: 2.2rem;
+      &:hover {
+        color: var(--color-primary);
+      }
       &:not(:last-child) {
         margin-right: 3rem;
       }

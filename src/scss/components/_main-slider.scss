@@ -33,46 +33,64 @@
       padding-left: 25rem;
     }
   }
+  &__buttons {
+    display: flex;
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+    i {
+      color: #fff;
+      font-size: 1.2rem;
+    }
+    @media (min-width: map-get($screenSizes, 'sm')) {
+      display: block;
+      position: static;
+      i {
+        display: none;
+      }
+    }
+  }
   &__next,
   &__prev {
-    position: absolute;
-    top: 0;
     z-index: 50;
-    height: 100%;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 1.5rem;
-    @media (min-width: map-get($screenSizes, 'md')) {
-      padding: 3rem;
-    }
-    transition: {
-      property: background-color, backdrop-filter, border-color;
-      duration: .2s;
-    }
-    z-index: var(--z-middle);
-    &:hover {
-      background-color: rgba(#ffffff, .05);
-      backdrop-filter: blur(5px);
-      border-color: rgba(#fff, .5);
-    }
+    padding: 1rem 3rem;
     p {
-      transform: rotate(-90deg);
-      user-select: none;
-      color: #fff;
-      font-weight: 500;
-      font-family: 'Numans', sans-serif;
-      font-size: 9px;
-      letter-spacing: .1rem;
+      display: none;
+      @media (min-width: map-get($screenSizes, 'sm')) {
+        display: block;
+        transform: rotate(-90deg);
+        user-select: none;
+        color: #fff;
+        font-weight: 500;
+        font-family: 'Numans', sans-serif;
+        font-size: 9px;
+        letter-spacing: .1rem;
+      }
       @media (min-width: map-get($screenSizes, 'md')) {
         font-size: 12px;
         letter-spacing: 2px;
       }
     }
-    /* DESKTOP FIRST */
-    @media (max-width: map-get($screenSizes, 'sm')) {
-      display: none;
+    @media (min-width: map-get($screenSizes, 'sm')) {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 1.5rem;
+      transition: {
+        property: background-color, backdrop-filter, border-color;
+        duration: .2s;
+      }
+      z-index: var(--z-middle);
+      &:hover {
+        background-color: rgba(#ffffff, .05);
+        backdrop-filter: blur(5px);
+        border-color: rgba(#fff, .5);
+      }
+      padding: 3rem;
     }
   }
   &__prev {
