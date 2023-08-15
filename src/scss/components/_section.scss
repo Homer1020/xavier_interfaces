@@ -1,27 +1,14 @@
 .section {
-  &--separators {
-    &::before,
-    &::after {
-      content: '';
-      display: block;
-      width: 2px;
-      height: 10rem;
-      background-color: #000;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    &::before {
-      margin-bottom: var(--top-separator, 5rem);
-    }
-    &::after {
-      margin-top: var(--bottom-separator, 5rem);
-    }
-    &-without-bottom {
-      &::after {
-        content: none !important;
-        display: none;
-      }
-    }
+  &__separator {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 10rem;
+    background-color: #000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--top-separator, 0);
+    margin-top: var(--bottom-separator, 0);
   }
   &__title {
     font-family: 'Montserrat', 'Arial', 'sans-serif';

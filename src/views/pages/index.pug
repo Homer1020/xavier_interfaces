@@ -4,18 +4,20 @@ block append head
   link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css")
 block content 
   include ../components/main-slider
-  section.l-section.section.section--separators.pb-0(style="--top-separator: 10rem; --bottom-separator: 10rem;")
+  section.l-section.section.pb-0
+    .section__separator(style="--top-separator: 10rem;" data-aos="fade-up")
     .container
-      h2.section__title 
+      h2.section__title(data-aos="fade-up") 
         |We're Hazel
         br
         |Creativity Agency
-      .row
+      .row(data-aos="fade-up")
         .col-lg-6.pe-lg-5
           p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         .col-lg-6.ps-lg-5 
           p Enthusiastically enable client-centered applications for progressive services. Objectively evolve B2B bandwidth rather than high standards in opportunities. Competently evisculate resource sucking catalysts for change through business mindshare. Collaboratively supply dynamic communities with bricks-and-clicks infrastructures.
-      a.button.button--default(href="#" style="margin-top: 5rem;") More about us
+      a.button.button--default(href="#" style="margin-top: 5rem;" data-aos="fade-up") More about us
+    .section__separator(style="--bottom-separator: 10rem;" data-aos="fade-up")
   section.l-section.section 
     nav.icons-nav 
       a(href="#0").icons-nav__item.icons-nav__item--active 
@@ -92,18 +94,19 @@ block content
           .stats
             p.stats__value 391
             p.stats__var OUR TEAM MEMBER
-  section.l-section.section.section--separators
+  section.l-section.section
+    .section__separator(style="--top-separator: 5rem;" data-aos="fade-up")
     .container-fluid
       .row
         .col-md-6.p-0.mb-5.mb-md-0 
           .ultra-content-box 
-            h2.section__title 
+            h2.section__title(data-aos="fade-up") 
               |We explore.
               br
               |We innovate.
-            p Our projects, all of which are unique, encompass contextual analysis, formal design, a sense of uses, an original approach to materials, pleasure in construction, new itineraries in the city, and a reinvention of urban situations.
-            a.button.button--default(href="#" style="--mt-md-top: 6rem; margin-top: 3rem") View all Projects
-        .col-md-6.px-5.px-md-0
+            p(data-aos="fade-up") Our projects, all of which are unique, encompass contextual analysis, formal design, a sense of uses, an original approach to materials, pleasure in construction, new itineraries in the city, and a reinvention of urban situations.
+            a.button.button--default(href="#" style="--mt-md-top: 6rem; margin-top: 3rem" data-aos="fade-up") View all Projects
+        .col-md-6.px-5.px-md-0(data-aos="fade-up")
           .swiper.cards-slider
             .cards-slider__buttons
               .cards-slider__buttons-prev <
@@ -130,45 +133,48 @@ block content
                     img(src="/images/imac.jpg", alt="Imagen de prueba")
                   figcaption.figure__caption 
                     h3 Apple iMac
-                    p Web design / Graphic
+                    p Web design / Graphic 
+    .section__separator(style="--bottom-separator: 5rem;" data-aos="fade-up")
   section.parallax-banner.section.l-section(style="background-image: url(/images/macbook.jpg);") 
     .container
-      h2.section__title(style="margin-bottom: 4rem")
-        |Add Creativity
-        br
-        |to your Business.
-      .row
-        .col-md-8(style="padding-right: 2.5rem;")
-          p.section__subtitle We specialize in deploying creatively branded, outstanding Buildings, incredible APPs, online advertising and media campaigns.
-          div.d-sm-flex.justify-content-sm-around.l-figicons(style="margin-top: 7rem") 
-            .figicon 
-              span.figicon__icon.lnr.lnr-chart-bars
-              h3.figicon__header 1. RESEARCH
-            .figicon 
-              span.figicon__icon.lnr.lnr-laptop-phone
-              h3.figicon__header 1. RESEARCH
-            .figicon 
-              span.figicon__icon.lnr.lnr-code
-              h3.figicon__header 1. RESEARCH
-            .figicon 
-              span.figicon__icon.lnr.lnr-rocket
-              h3.figicon__header 1. RESEARCH
+      div(data-aos="fade-up")
+        h2.section__title(style="margin-bottom: 4rem")
+          |Add Creativity
+          br
+          |to your Business.
+        .row
+          .col-md-8(style="padding-right: 2.5rem;")
+            p.section__subtitle We specialize in deploying creatively branded, outstanding Buildings, incredible APPs, online advertising and media campaigns.
+            div.d-sm-flex.justify-content-sm-around.l-figicons(style="margin-top: 7rem") 
+              .figicon 
+                span.figicon__icon.lnr.lnr-chart-bars
+                h3.figicon__header 1. RESEARCH
+              .figicon 
+                span.figicon__icon.lnr.lnr-laptop-phone
+                h3.figicon__header 1. RESEARCH
+              .figicon 
+                span.figicon__icon.lnr.lnr-code
+                h3.figicon__header 1. RESEARCH
+              .figicon 
+                span.figicon__icon.lnr.lnr-rocket
+                h3.figicon__header 1. RESEARCH
   section.banner.banner--dark.d-flex.align-items-center.justify-content-center(style="background-image: url(/images/happyclients.jpg); min-height: 500px")
-    h2.banner__title.text-center Step two. Design.
-  section.l-section.section.section--separators.section--separators-without-bottom
+    h2.banner__title.text-center(data-aos="fade-up") Step two. Design.
+  section.l-section.section
+    .section__separator(style="--top-separator: 5rem;" data-aos="fade-up")
     .container
       .row
         .col-md-4(style="padding-right: 2.5rem;")
-          h2.section__title 
+          h2.section__title(data-aos="fade-up") 
             |The
             br
             |Team
-          p We are a band of makers, industrious and experimental. We are architects, designers, creators, and entrepreneurs
-          a.button.button--default(href="#" style="margin-top: 5rem;") Get Hazel Today
+          p(data-aos="fade-up") We are a band of makers, industrious and experimental. We are architects, designers, creators, and entrepreneurs
+          a.button.button--default(href="#" style="margin-top: 5rem;" data-aos="fade-up") Get Hazel Today
         .col-md-8.ps-md-4
           .l-masonry-fake 
             div.mb-5.mb-md-0 
-              article.info-card
+              article(data-aos="fade-up").info-card
                 .info-card__image 
                   img(src="/images/t5.jpg", alt="Person")
                 .info-card__info 
@@ -182,7 +188,7 @@ block content
                     a.info-card__link(href="#") 
                       i.fab.fa-youtube-square
             div.mb-5.mb-md-0 
-              article.info-card
+              article(data-aos="fade-up" data-aos-delay="150").info-card
                 .info-card__image 
                   img(src="/images/t5.jpg", alt="Person")
                 .info-card__info 
@@ -196,7 +202,7 @@ block content
                     a.info-card__link(href="#") 
                       i.fab.fa-youtube-square
             div.mb-5.mb-md-0 
-              article.info-card
+              article(data-aos="fade-up").info-card
                 .info-card__image 
                   img(src="/images/t5.jpg", alt="Person")
                 .info-card__info 
@@ -210,7 +216,7 @@ block content
                     a.info-card__link(href="#") 
                       i.fab.fa-youtube-square
             div.mb-5.mb-md-0 
-              article.info-card
+              article(data-aos="fade-up" data-aos-delay="150").info-card
                 .info-card__image 
                   img(src="/images/t5.jpg", alt="Person")
                 .info-card__info 

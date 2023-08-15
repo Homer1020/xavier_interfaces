@@ -1,5 +1,6 @@
 if(document.querySelector('#main-slider')) {
 	const $mainSliderIndexs = Array.from(document.querySelectorAll('.main-slider__text--big'))
+	const $mainSliderLengths = Array.from(document.querySelectorAll('.main-slider__length'))
 	const mainSlider = new Swiper('#main-slider .swiper', {
 		effect: "creative",
 		creativeEffect: {
@@ -17,16 +18,27 @@ if(document.querySelector('#main-slider')) {
 		// loop: true
 	})
 
+	$mainSliderLengths.forEach(sliderLength => {
+		sliderLength.textContent = $mainSliderLengths.length
+	})
+
 	const handleSlideChange = () => {
 		const { activeIndex } = mainSlider
 		$mainSliderIndexs.map(e => {
-			e.textContent= activeIndex + 1
+			e.textContent = activeIndex + 1
 		})
 	}
 
 	handleSlideChange()
+
+	const handleSetSliderAnimation = () => {
+		const el = mainSlider.visibleSlides[0]
+	}
+
 	mainSlider.on('activeIndexChange', handleSlideChange)
 
+	mainSlider.on('slideNextTransitionEnd', handleSetSliderAnimation)
+	mainSlider.on('slidePrevTransitionEnd', handleSetSliderAnimation)
 }
 
 /**
@@ -154,6 +166,9 @@ $navItemsHasSubNav.forEach($item => {
 		$item.classList.add('active')
 		$navbar.classList.add('subnav-active')
 	})
-})
+});
 
-console.log('By: Homer Moncayo')
+/**
+ * ANIMACIONES AL HACER SCROLL
+ */
+AOS.init()
