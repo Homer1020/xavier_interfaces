@@ -4,6 +4,7 @@ if(document.querySelector('#main-slider')) {
 	const mainSlider = new Swiper('#main-slider .swiper', {
 		effect: "creative",
 		speed: 800,
+		allowTouchMove: false,
 		creativeEffect: {
 			prev: {
 				translate: ["-20%", 0, -1]
