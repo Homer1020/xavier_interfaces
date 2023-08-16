@@ -3,6 +3,7 @@ if(document.querySelector('#main-slider')) {
 	const $mainSliderLengths = Array.from(document.querySelectorAll('.main-slider__length'))
 	const mainSlider = new Swiper('#main-slider .swiper', {
 		effect: "creative",
+		speed: 800,
 		creativeEffect: {
 			prev: {
 				translate: ["-20%", 0, -1]
@@ -30,15 +31,6 @@ if(document.querySelector('#main-slider')) {
 	}
 
 	handleSlideChange()
-
-	const handleSetSliderAnimation = () => {
-		const el = mainSlider.visibleSlides[0]
-	}
-
-	mainSlider.on('activeIndexChange', handleSlideChange)
-
-	mainSlider.on('slideNextTransitionEnd', handleSetSliderAnimation)
-	mainSlider.on('slidePrevTransitionEnd', handleSetSliderAnimation)
 }
 
 /**
@@ -100,7 +92,7 @@ if(document.querySelector('.swiper--tabs')) {
  * CARDS SLIDER
  */
 if(document.querySelector('.cards-slider')) {
-	const cardsSlider = new Swiper('.cards-slider', {
+	new Swiper('.cards-slider', {
 		breakpoints: {
 			0: {
 				spaceBetween: 20,

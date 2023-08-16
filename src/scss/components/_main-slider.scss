@@ -1,3 +1,21 @@
+@keyframes text-effect-parent {
+  from {
+    clip-path: inset(0 0 0 50%);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes text-effect {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .main-slider {
   .swiper {
     width: 100%;
@@ -21,6 +39,20 @@
         height: 100%;
         background-color: #00000050;
         z-index: -1;
+      }
+      .text-effect {
+        opacity: 0;
+        transition: opacity .8s;
+      }
+      &-visible {
+        .text-effect {
+          transition: none;
+          opacity: 1;
+          animation: text-effect-parent .8s forwards;
+          h2 {
+            animation: text-effect .8s forwards;
+          }
+        }
       }
     }
   }
