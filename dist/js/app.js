@@ -167,3 +167,19 @@ $navItemsHasSubNav.forEach($item => {
  * ANIMACIONES AL HACER SCROLL
  */
 AOS.init()
+
+/**
+ * ACTIVE SECTIONS
+ */
+const $sections = document.querySelectorAll('.active-on-scroll')
+let observer = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if(entry.isIntersecting) {
+			entry.target.classList.add('active')
+		}
+	})
+});
+
+$sections.forEach($section => {
+	observer.observe($section)
+})

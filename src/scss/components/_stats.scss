@@ -1,6 +1,22 @@
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+.active .stats {
+  --num: var(--value);
+
+}
+
 .stats {
   padding: 3.7rem 0;
+  transition: --num 2s;
+  counter-reset: num var(--num);
   &__value {
+    &::after {
+      content: counter(num);
+    }
     font-family: 'Montserrat';
     font-weight: 600;
     font-size: 5rem;

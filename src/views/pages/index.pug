@@ -79,20 +79,20 @@ block content
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur qui. A mollitia rerum incidunt. Libero eius alias amet, perspiciatis laborum explicabo possimus iure sed eligendi fuga soluta commodi adipisci?
               .col-md-6.ps-md-5
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur qui. A mollitia rerum incidunt. Libero eius alias amet, perspiciatis laborum explicabo possimus iure sed eligendi fuga soluta commodi adipisci?
-  section.banner(style="background-image: url(\"https://preview.treethemes.com/hazel/demo15/wp-content/uploads/sites/32/revslider/portfolio-showreel/moon-new_138.jpeg\")")
+  section.banner(style="background-image: url(\"https://preview.treethemes.com/hazel/demo15/wp-content/uploads/sites/32/revslider/portfolio-showreel/moon-new_138.jpeg\")").active-on-scroll
     .container
       .row 
-        article.col-md-4.text-center
-          .stats 
-            p.stats__value 391
+        article.col-md-4.text-center(data-aos="fade-up")
+          .stats(style="--value: 391") 
+            p.stats__value
             p.stats__var CLIENTS
-        article.col-md-4.text-center
-          .stats
-            p.stats__value 391
+        article.col-md-4.text-center(data-aos="fade-up")
+          .stats(style="--value: 1091")
+            p.stats__value
             p.stats__var FINISHED PROJECTS
-        article.col-md-4.text-center 
-          .stats
-            p.stats__value 391
+        article.col-md-4.text-center(data-aos="fade-up") 
+          .stats(style="--value: 66")
+            p.stats__value
             p.stats__var OUR TEAM MEMBER
   section.l-section.section
     .section__separator(style="--top-separator: 5rem;" data-aos="fade-up")
