@@ -31,6 +31,8 @@ if(document.querySelector('#main-slider')) {
 		})
 	}
 
+	mainSlider.on('activeIndexChange', handleSlideChange)
+
 	handleSlideChange()
 }
 

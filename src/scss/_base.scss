@@ -27,3 +27,8 @@ ul {
 img  {
 	max-width: 100%;
 }
+
+/* DISABLE OPERA POPOUT BUTTONS FOR VIDEOS */
+#detach-button-host {
+	display: none !important;
+}
