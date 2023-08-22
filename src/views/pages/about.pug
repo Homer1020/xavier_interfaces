@@ -1,4 +1,17 @@
 extends ../layouts/app
 block content 
-  section.l-section
-    h1 Nosotros
+  section.banner.banner--full.banner--center.banner--dark.banner--dark--md(style="background-image: url(/images/bird.jpg); padding-top: 90px")
+    .container
+      p.banner__info(data-aos="fade-up" data-aos-duration="600") We have the Solution
+      h1.banner__title.banner__title--md.text-white(data-aos="fade-up" data-aos-duration="900") Branding, Code
+        br
+        | &amp; Web Design
+      a(href="#" style="margin-top: 4rem" data-aos="fade-up" data-aos-duration="700").button.button--default.button--md Know the team
+      include ../partials/banner-separator
+  section.section.l-section
+    .container 
+      .row 
+        .col-lg-6.pe-lg-5
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        .col-lg-6.ps-lg-5 
+          p Enthusiastically enable client-centered applications for progressive services. Objectively evolve B2B bandwidth rather than high standards in opportunities. Competently evisculate resource sucking catalysts for change through business mindshare. Collaboratively supply dynamic communities with bricks-and-clicks infrastructures.
