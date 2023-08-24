@@ -1,0 +1,27 @@
+.section-box {
+  padding: 5rem;
+  &__dark {
+    background-color: #000;
+    .section-box__text {
+      color: #ababab;
+    }
+    .section-box__title {
+      color: #fff;
+    }
+  }
+  &__title {
+    font-family: 'Montserrat', 'Arial', 'sans-serif';
+    font-weight: 800;
+    font-size: 40px;
+    color: #000000;
+    line-height: 1.3em;
+    letter-spacing: 0px;
+    text-transform: none;
+    margin-bottom: 2rem;
+  }
+  &__text {
+    font-family: 'Numans', 'Arial', 'sans-serif';
+    font-size: 14px;
+    color: #000000;
+  }
+}

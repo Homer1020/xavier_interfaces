@@ -1,0 +1,18 @@
+mixin infoCard(info)
+  - let { photo, name, description, socials } = info
+  article.info-card
+    .info-card__image 
+      img(src=photo, alt="Person")
+    .info-card__info 
+      h3.info-card__title= name
+      p.info-card__description= description
+      +infoCardSocial(socials)
+
+mixin infoCardSocialItem(link, social)
+  a.info-card__link(href=link) 
+    i(class=`fab fa-${ social }`)
+
+mixin infoCardSocial(links)
+  .info-card__links
+    each link in links
+      +infoCardSocialItem(link.link, link.social)

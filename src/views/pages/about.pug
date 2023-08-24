@@ -12,6 +12,39 @@ block content
     .container 
       .row 
         .col-lg-6.pe-lg-5
-          p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          h2.section__title.section__title--xsm(data-aos="fade-up") We Design Solutions
+          p(data-aos="fade-up" data-aos-delay="100") Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         .col-lg-6.ps-lg-5 
-          p Enthusiastically enable client-centered applications for progressive services. Objectively evolve B2B bandwidth rather than high standards in opportunities. Competently evisculate resource sucking catalysts for change through business mindshare. Collaboratively supply dynamic communities with bricks-and-clicks infrastructures.
+          h2.section__title.section__title--xsm(data-aos="fade-up") Strategy Planning
+          p(data-aos="fade-up" data-aos-delay="100") Enthusiastically enable client-centered applications for progressive services. Objectively evolve B2B bandwidth rather than high standards in opportunities. Competently evisculate resource sucking catalysts for change through business mindshare. Collaboratively supply dynamic communities with bricks-and-clicks infrastructures.
+  section.l-grid-info-cards 
+    include ../mixins/info-card
+    - var n = 0
+    while n < 8
+      - n++
+      if n === 2
+        .section-box.section-box__dark
+          h2.section-box__title Our Team
+          p.section-box__text Seamlessly aggregate total linkage info Dramatically visualize ubiquitous leadership.
+      else if n === 7
+        div.section-box
+          h2.section-box__title Join us!
+          p.section-box__text Seamlessly aggregate worldwide total linkage through
+          a.button.button--default(href="#" style="margin-top: 2rem;") Apply Now
+      else
+        +infoCard({
+          photo: `/images/t${n}.jpg`,
+          name: 'Lucas Moreira',
+          description: 'CEO',
+          socials: [
+            {link: '#', social: 'linkedin'},
+            {link: '#', social: 'twitter-square'},
+            {link: '#', social: 'youtube-square'}
+          ]
+        })
+  section(style="padding-bottom: 17rem").l-section.section.text-center
+    .section__separator(style="--top-separator: 10rem;" data-aos="fade-up")
+    .container
+      h2.section__title(data-aos="fade-up").mb-5 Lets work together!
+      p.section__slogan(data-aos="fade-up") Our projects are unique, formal design, a sense of uses.
+      a.button.button--default(href="#" style="margin-top: 2rem;" data-aos="fade-up") Purchase Hazel now
