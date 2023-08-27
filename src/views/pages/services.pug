@@ -1,0 +1,56 @@
+extends ../layouts/app
+block content 
+  section.banner.banner--dark.banner--center(style="background-image: url(/images/moon.jpeg); padding: 17rem 0;")
+    div
+      p.banner__info.text-center We create amazing things
+      h1.text-center.banner__title What we do
+      div.d-sm-flex.justify-content-center.flex-wrap
+        .figicon.figicon--banner(style="margin-top: 5rem")  
+          span.figicon__icon.lnr.lnr-chart-bars
+          h3.figicon__header 1. RESEARCH
+        .figicon.figicon--banner(style="margin-top: 5rem")  
+          span.figicon__icon.lnr.lnr-laptop-phone
+          h3.figicon__header 1. RESEARCH
+        .figicon.figicon--banner(style="margin-top: 5rem")  
+          span.figicon__icon.lnr.lnr-code
+          h3.figicon__header 1. RESEARCH
+        .figicon.figicon--banner(style="margin-top: 5rem")  
+          span.figicon__icon.lnr.lnr-rocket
+          h3.figicon__header 1. RESEARCH
+        .figicon.figicon--banner(style="margin-top: 5rem")  
+          span.figicon__icon.lnr.lnr-code
+          h3.figicon__header 1. RESEARCH
+  section.l-section.section.text-center
+    .section__separator(style="--top-separator: 10rem;" data-aos="fade-up")
+    .container
+      
+  section.banner(style="background-image: url(/images/macbook.jpg);")
+    .container
+      .row.justify-content-center(data-aos="fade-up")
+        .col-lg-8
+          h2.section__title(data-aos="fade-up") 
+            |Build Big.
+            br
+            |Build Awesome.
+          p.text-dark Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  include ../components/banner-stats
+  +bannerStats('/videos/bg2.mp4', [
+    {
+      param: 'CLIENTS',
+      value: 391
+    },
+    {
+      param: 'FINISHED PROJECTS',
+      value: 1091
+    },
+    {
+      param: 'OUR TEAM MEMBER',
+      value: 66
+    }
+  ], true)
+  section(style="padding-bottom: 17rem").l-section.section.text-center
+    .section__separator(style="--top-separator: 10rem;" data-aos="fade-up")
+    .container
+      h2.section__title(data-aos="fade-up").mb-5 Lets work together!
+      p.section__slogan(data-aos="fade-up") Our projects are unique, formal design, a sense of uses.
+      a.button.button--default(href="#" style="margin-top: 2rem;" data-aos="fade-up") Purchase Hazel now

@@ -1,0 +1,11 @@
+mixin bannerStats(bg, data, isVideo = false)
+  section.banner(style=`${ isVideo ? `background-image: url(${ bg })` : '' }`).active-on-scroll
+    if isVideo 
+      video(src=bg muted autoplay).banner__bg 
+    .container
+      .row 
+        each item in data 
+          article.col-md-4.text-center(data-aos="fade-up")
+            .stats(style=`--value: ${ item.value }`) 
+              p.stats__value
+              p.stats__var= item.param
