@@ -6,24 +6,30 @@ block content
       h1.text-center.banner__title What we do
       div.d-sm-flex.justify-content-center.flex-wrap
         .figicon.figicon--banner(style="margin-top: 5rem")  
-          span.figicon__icon.lnr.lnr-chart-bars
-          h3.figicon__header 1. RESEARCH
-        .figicon.figicon--banner(style="margin-top: 5rem")  
           span.figicon__icon.lnr.lnr-laptop-phone
           h3.figicon__header 1. RESEARCH
         .figicon.figicon--banner(style="margin-top: 5rem")  
-          span.figicon__icon.lnr.lnr-code
-          h3.figicon__header 1. RESEARCH
-        .figicon.figicon--banner(style="margin-top: 5rem")  
-          span.figicon__icon.lnr.lnr-rocket
+          span.figicon__icon.lnr.lnr-apartment
           h3.figicon__header 1. RESEARCH
         .figicon.figicon--banner(style="margin-top: 5rem")  
           span.figicon__icon.lnr.lnr-code
           h3.figicon__header 1. RESEARCH
-  section.l-section.section.text-center
+        .figicon.figicon--banner(style="margin-top: 5rem")  
+          span.figicon__icon.lnr.lnr-camera-video
+          h3.figicon__header 1. RESEARCH
+        .figicon.figicon--banner(style="margin-top: 5rem")  
+          span.figicon__icon.lnr.lnr-car
+          h3.figicon__header 1. RESEARCH
+  section.l-section.section
     .section__separator(style="--top-separator: 10rem;" data-aos="fade-up")
     .container
-      
+      .row 
+        .col-12.col-md-6.col-lg-4.px-md-4.mb-5.mb-md-0 
+          +overlayCard('/images/serv1.jpg', 'WEB DESIGN', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.')
+        .col-12.col-md-6.col-lg-4.px-md-4.mb-5.mb-md-0 
+          +overlayCard('/images/serv1.jpg', 'WEB DESIGN', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.')
+        .col-12.col-md-6.col-lg-4.px-md-4.mb-5.mb-md-0 
+          +overlayCard('/images/serv1.jpg', 'WEB DESIGN', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.')
   section.banner(style="background-image: url(/images/macbook.jpg);")
     .container
       .row.justify-content-center(data-aos="fade-up")

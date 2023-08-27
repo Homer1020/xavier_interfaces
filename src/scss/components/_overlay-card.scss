@@ -1,0 +1,67 @@
+.overlay-card {
+  padding: 4rem 3rem;
+  color: #fff;
+  height: 480px;
+  background-position: -2rem center;
+  background-size: calc(100% + 2rem);
+  position: relative;
+  transition: background-position .4s;
+  overflow: hidden;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .3;
+    transition: opacity .4s;
+  }
+  &__title,
+  &__text {
+    position: relative;
+  }
+  &__title {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    &::after {
+      margin-top: 1.5rem;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      display: block;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .4s;
+    }
+  }
+  &__text {
+    transition: transform .4s, opacity .4s;
+    transform: translateX(100%);
+    color: inherit !important;
+    font-family: 'Lato';
+    font-weight: normal;
+    font-size: 1.5rem;
+    opacity: 0;
+  }
+  &:hover {
+    &::before {
+      opacity: 0.6;
+    }
+    background-position: 0 center;
+    .overlay-card {
+      &__title::after {
+        transform: scaleX(1);
+      }
+      &__text { 
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+}
