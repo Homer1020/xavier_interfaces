@@ -2,3 +2,9 @@ mixin overlayCard(bg, title, desc)
   .overlay-card(style="background-image: url(" + bg + ");") 
     h3.overlay-card__title= title
     p.overlay-card__text= desc
+
+mixin iconText(iconClass, text)
+  .d-flex.align-items-center(style="margin-right: 5rem") 
+    div(style="margin-right: 3rem")
+      div(class=`lnr ${ iconClass }` style="    color: var(--color-primary); font-size: 45px; display: inline-block;") 
+    p.mb-0(style="font-family: 'Lato'; font-weight: normal; font-style: normal; color: #ffffff; font-size: 1.8rem; line-height: 2.2rem; max-width: 300px;")= text

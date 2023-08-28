@@ -1,0 +1,18 @@
+extends ../layouts/app
+block content 
+  section.banner.banner--full.banner--center.banner--dark.banner--dark--md(style="background-image: url(/images/bird.jpg); padding-top: 90px")
+    .container
+      p.banner__info(data-aos="fade-up" data-aos-duration="600") Get in touch
+      h1.banner__title.banner__title--md.text-white(data-aos="fade-up" data-aos-duration="900")
+        |Let's create
+        br
+        |something together!
+      div.d-lg-flex.align-items-center(style="margin-top: 4rem;") 
+        .mb-5.mb-lg-0
+          +iconText('lnr-map', 'PO Box 16122 Collins Street West Victoria 8007 Australia')
+        .mb-5.mb-lg-0
+          +iconText('lnr-envelope', 'geral@example.com')
+        .mb-5.mb-lg-0
+          +iconText('lnr-phone-handset', '(+23) 345 322 233')
+      include ../partials/banner-separator
+  section.section.l-section
