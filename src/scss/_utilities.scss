@@ -1,3 +1,7 @@
-.uppercase {
-  text-transform: uppercase;
+@media (min-width: 992px) {
+  .bg-svg {
+    background-image: url(/images/elements3-01.svg);
+    background-attachment: fixed;
+    background-size: 100%;
+  }
 }

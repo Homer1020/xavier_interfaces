@@ -8,6 +8,7 @@
   font-weight: 800;
   font-size: 15px;
   transition: background-color .3s, color .3s;
+  border: none;
   &:hover {
     background-color: #000;
     color: var(--color-primary);

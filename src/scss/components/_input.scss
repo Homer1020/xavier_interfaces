@@ -1,0 +1,29 @@
+.input {
+  border: 2px solid #ededed !important;
+  font-size: 14px !important;
+  font-weight: 600;
+  padding: 13px 20px;
+  width: 100%;
+  line-height: 25px;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &__label {
+    font-family: 'Numans', 'Arial', 'sans-serif';
+    font-size: 13px;
+    margin-bottom: 0.7rem;
+    color: #000;
+  }
+
+  &.textarea {
+    min-height: 15rem;
+  }
+
+  &.form-select {
+    border-radius: 0;
+    font-weight: normal;
+    font-size: 14px;
+  }
+}

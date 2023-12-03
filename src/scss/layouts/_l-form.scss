@@ -1,0 +1,10 @@
+.l-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  &__input {
+    &--full {
+      grid-column: 1/3;
+    }
+  }
+}

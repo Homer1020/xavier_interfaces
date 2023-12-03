@@ -15,4 +15,31 @@ block content
         .mb-5.mb-lg-0
           +iconText('lnr-phone-handset', '(+23) 345 322 233')
       include ../partials/banner-separator
-  section.section.l-section
+  section.section.l-section.bg-svg
+    .container
+      h2.section__title(style="margin-bottom: 2rem") Contact us today
+      p(style="margin-bottom: 5rem;") Contact us via the contact form below to discuss
+        br
+        |your project, your idea.
+      .row 
+        .col-md-9
+          form(action="").l-form
+            .l-form__input
+              label.input__label Your Name (required)
+              input.input
+            .l-form__input
+              label.input__label Your Email (required)
+              input.input
+            .l-form__input
+              label.input__label Subject
+              input.input
+            .l-form__input
+              label.input__label Service Desired
+              select.input.form-select
+                option Web APS
+            .l-form__input.l-form__input--full
+              label.input__label Your Message
+              textarea.input.textarea
+            div
+              button(type="submit" style="font-size: 14px;").button Send Emails
+
