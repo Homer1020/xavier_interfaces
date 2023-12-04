@@ -5,7 +5,9 @@
   width: 100%;
   z-index: var(--z-front);
   transition: background-color .3s, transform .3s;
-  // padding: 2rem 0;
+  &--light {
+    background-color: #fff; 
+  }
   @media (min-width: map-get($screenSizes, 'md')) {
     padding: 0;
   }
@@ -18,6 +20,9 @@
   }
   &--fixed {
     background-color: #000;
+    &.site-header--light {
+      background-color: #fff;
+    }
     &.show {
       transform: translateY(-100%);
     }

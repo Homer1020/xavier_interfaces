@@ -1,9 +1,12 @@
-header#site-header.site-header 
+header#site-header(class=`site-header ${ siteHeaderLight ? 'site-header--light' : '' }`) 
   .site-header__container 
     a(href="/").brand 
-      img(src="/images/logo-white.svg", alt="Logo")
+      if !siteHeaderLight
+        img(src="/images/logo-white.svg", alt="Logo")
+      else 
+        img(src="/images/logo-black.svg", alt="Logo")
     .site-header__right
-      nav.navbar#navbar.p-0
+      nav#navbar(class=`p-0 navbar ${ siteHeaderLight ? 'navbar--light' : '' }`)
         ul.navbar__nav.m-0 
           li.navbar__item 
             a.navbar__link(href="/") home.
@@ -21,7 +24,7 @@ header#site-header.site-header
               li
                 a(href="/services.html") Services
               li
-                a(href="/contact.html") Contact with map
+                a(href="/contact-map.html") Contact with map
               li
                 a(href="/contact.html") Contact us
               li
@@ -31,7 +34,7 @@ header#site-header.site-header
           li.navbar__item
             a.navbar__link(href="#") portfolios.
       a.button(href="#") Get in touch
-      button.navbar__toggle#navbar-toggle 
+      button#navbar-toggle(class=`navbar__toggle ${ siteHeaderLight ? 'navbar__toggle--light' : ''}`) 
         span.navbar__toggle-line 
         span.navbar__toggle-line 
         span.navbar__toggle-line 

@@ -64,6 +64,16 @@
         margin-right: 3rem;
       }
     }
+    &--dark {
+      justify-content: start;
+      a {
+        color: #000;
+        font-size: 1.6rem;
+        &:not(:last-child) {
+          margin-right: 1.6rem;
+        }
+      }
+    }
   }
   &__bottom {
     padding: 4rem 0;

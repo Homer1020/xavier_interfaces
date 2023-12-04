@@ -9,6 +9,18 @@
     display: flex;
     line-height: 1;
   }
+  &--light {
+    .navbar {
+      @media (min-width: 992px) {
+        &__link {
+          color: #333;
+          &:hover {
+            color: var(--color-primary)
+          }
+        } 
+      }
+    }
+  }
   &__link {
     padding: 3rem;
     display: block;
@@ -72,6 +84,13 @@
       display: block;
       &:not(:last-child) {
         margin-bottom: 0.3rem;
+      }
+    }
+    &--light {
+      .navbar__toggle {
+        &-line {
+          background-color: #000;
+        }
       }
     }
   }
