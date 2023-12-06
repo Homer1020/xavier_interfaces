@@ -28,4 +28,118 @@
 @import 'components/overlay-card';
 @import 'components/input';
 
-@import 'utilities'
+@import 'utilities';
+
+.l-grid-blog {
+  position: relative;
+}
+
+.tag {
+  background: rgba(0,0,0,0.5);
+  margin: 0 5px 0 0;
+  padding: 3px 8px 2px;
+  font-size: 10px !important;
+  color: rgba(255,255,255,0.7) !important;
+  font-weight: 500 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: background-color .3s;
+  &:hover {
+    background-color: var(--color-primary);
+  }
+}
+
+.post {
+  // display: block;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgb(16 16 16) 100%);
+    opacity: 0.7;
+  }
+
+  &:hover {
+    .post__thumbnail {
+      transform: scale(1.1);
+    }
+  }
+
+  &__thumbnail {
+    transition: transform .5s;
+    z-index: -1;
+    position: relative;
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  &__title {
+    color: #fff;
+    font-family: 'Montserrat', 'Arial', 'sans-serif' !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    margin-bottom: 0;
+    transition: color .3s;
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__tags {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.item {
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  padding: .5rem;
+  @media (min-width: 992px) {
+    width: 50%;
+  }
+  @media (min-width: 1200px) {
+    width: 33%;
+  }
+}
+.item.muuri-item-dragging {
+  z-index: 3;
+}
+.item.muuri-item-releasing {
+  z-index: 2;
+}
+.item.muuri-item-hidden {
+  z-index: 0;
+}
+.item-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-alt {
+  position: relative;
+  margin-right: 10px;
+  text-align: center;
+  background-color: #101010;
+  color: #fff;
+  border: 1px solid #ECECEC;
+  padding: 12px 25px 10px 25px;
+  font-family: 'Hind','Arial',sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}

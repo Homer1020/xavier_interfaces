@@ -183,3 +183,7 @@ let observer = new IntersectionObserver((entries) => {
 $sections.forEach($section => {
 	observer.observe($section)
 })
+
+var grid = new Muuri('.l-grid-blog ', {
+	items: '.item'
+});

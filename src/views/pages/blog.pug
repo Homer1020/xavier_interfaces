@@ -1,0 +1,102 @@
+extends ../layouts/app
+block enviroments
+  - var headerInitialBG = '#000'
+block content 
+  div(style="margin-top: 9rem")
+    .container-fluid.p-4
+      .l-grid-blog 
+        .item
+          .item-content
+            .post(data-aos="fade-up")
+              img(src="/images/post1.jpeg").post__thumbnail
+              .post__info
+                .post__tags 
+                  a(href="#").tag People
+                  a(href="#").tag People
+                a(href="#")
+                  h3.post__title Post with Gallery
+        .item
+          .item-content
+            .post(data-aos="fade-up" data-aos-delay="100")
+              img(src="/images/post2.jpeg").post__thumbnail
+              .post__info
+                .post__tags 
+                  a(href="#").tag People
+                  a(href="#").tag People
+                a(href="#")
+                  h3.post__title Post with Gallery
+        .item
+          .item-content
+            .post(data-aos="fade-up" data-aos-delay="200")
+              img(src="/images/post3.jpeg").post__thumbnail
+              .post__info
+                .post__tags 
+                  a(href="#").tag People
+                  a(href="#").tag People
+                a(href="#")
+                  h3.post__title Post with Gallery
+        .item
+          .item-content
+            .post(data-aos="fade-up" data-aos-delay="300")
+              img(src="/images/post4.jpeg").post__thumbnail
+              .post__info
+                .post__tags 
+                  a(href="#").tag People
+                  a(href="#").tag People
+                a(href="#")
+                  h3.post__title Post with Gallery
+        .item
+          .item-content
+            .post(data-aos="fade-up" data-aos-delay="400")
+              img(src="/images/post5.jpeg").post__thumbnail
+              .post__info
+                .post__tags 
+                  a(href="#").tag People
+                  a(href="#").tag People
+                a(href="#")
+                  h3.post__title Post with Gallery
+        .item
+          .item-content
+            .post(data-aos="fade-up" data-aos-delay="500")
+              img(src="/images/post6.jpeg").post__thumbnail
+              .post__info
+                .post__tags 
+                  a(href="#").tag People
+                  a(href="#").tag People
+                a(href="#")
+                  h3.post__title Post with Gallery
+        .item
+          .item-content
+            .post(data-aos="fade-up" data-aos-delay="400")
+              img(src="/images/post7.jpeg").post__thumbnail
+              .post__info
+                .post__tags 
+                  a(href="#").tag People
+                  a(href="#").tag People
+                a(href="#")
+                  h3.post__title Post with Gallery
+        .item
+          .item-content
+            .post(data-aos="fade-up" data-aos-delay="500")
+              img(src="/images/post8.jpeg").post__thumbnail
+              .post__info
+                .post__tags 
+                  a(href="#").tag People
+                  a(href="#").tag People
+                a(href="#")
+                  h3.post__title Post with Gallery
+        .item
+          .item-content
+            .post(data-aos="fade-up" data-aos-delay="300")
+              img(src="/images/post9.jpeg").post__thumbnail
+              .post__info
+                .post__tags 
+                  a(href="#").tag People
+                  a(href="#").tag People
+                a(href="#")
+                  h3.post__title Post with Gallery
+      div.text-center(style="margin-bottom: 10rem; margin-top: 5rem;") 
+        button.btn-alt.text-uppercase Load More Posts
+block prepend scripts 
+  script(src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js")
+  script(src='https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js')

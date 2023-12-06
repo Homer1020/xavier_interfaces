@@ -1,4 +1,4 @@
-header#site-header(class=`site-header ${ siteHeaderLight ? 'site-header--light' : '' }`) 
+header#site-header(class=`site-header ${ siteHeaderLight ? 'site-header--light' : '' }` style=`background: ${headerInitialBG || ''};`) 
   .site-header__container 
     a(href="/").brand 
       if !siteHeaderLight
@@ -30,7 +30,7 @@ header#site-header(class=`site-header ${ siteHeaderLight ? 'site-header--light' 
               li
                 a(href="#") Project Planner
           li.navbar__item
-            a.navbar__link(href="#") blog.
+            a.navbar__link(href="/blog.html") blog.
           li.navbar__item
             a.navbar__link(href="#") portfolios.
       a.button(href="#") Get in touch
