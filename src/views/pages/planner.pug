@@ -1,0 +1,83 @@
+extends ../layouts/app
+block enviroments
+  - var headerInitialBG = '#000'
+block content 
+  section.banner.banner--dark.banner--center(style="background-image: url(/images/bg.jpg); padding-bottom: 19rem; padding-top: 26rem;")
+    div
+      h1.text-center.banner__title.banner__title--md.text-white Project Planner
+  section.l-section.section
+    .section__separator(style="--top-separator: 10rem;" data-aos="fade-down" data-aos-offset="-120" data-aos-delay="200")
+    .container
+      .row.justify-content-center 
+        .col-md-11
+          form(action="").l-form
+            .l-form__input
+              label.input__label Your Name
+              input.input
+            .l-form__input
+              label.input__label E-Mail Address
+              input.input
+            .l-form__input
+              label.input__label Phone Number
+              input.input
+            .l-form__input
+              label.input__label Address Line 1
+              input.input
+            .l-form__input
+              label.input__label Address Line 2
+              input.input
+            .l-form__input
+              label.input__label City
+              input.input
+            .l-form__input
+              label.input__label Your Website
+              input.input
+            .l-form__input
+              label.input__label Inspiration Website
+              input.input
+            .l-form__input.l-form__input--full-y
+              label.input__label.d-block Services
+              .form-check.mb-2
+                input#inp1.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='inp1')
+                  | Unique Design
+              .form-check.mb-2
+                input#inp2.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='inp2')
+                  | Automated Backups
+              .form-check.mb-2
+                input#inp3.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='inp3')
+                  | 24/7 Security Monitoring
+              .form-check.mb-2
+                input#inp4.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='inp4')
+                  | Performance Optimization
+              .form-check.mb-2
+                input#inp5.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='inp5')
+                  | Cloud Hosting
+              .form-check.mb-2
+                input#inp6.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='inp6')
+                  | Server Migration
+              .form-check.mb-2
+                input#inp7.form-check-input(type='checkbox' value='')
+                label.form-check-label(for='inp7')
+                  | Backend WebSite(CMS)
+            .l-form__input
+              label.input__label Project Budget
+              select.input.form-select
+                option Web APS
+            .l-form__input
+              label.input__label Project Timeframe
+              select.input.form-select
+                option Web APS
+            .l-form__input.l-form__input--full
+              label.input__label Project Description
+              textarea.input.textarea
+            .l-form__input.l-form__input--full
+              label.input__label.d-block Project Files
+              input(type="file" style="font-size: 1.2rem;").d-block
+            div
+              button(type="submit" style="font-size: 14px;").button Submit Request

@@ -5,3 +5,19 @@
     background-size: 100%;
   }
 }
+
+.form-check-input[type=checkbox] {
+  border-radius: 0;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.form-check-input:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.form-check-label {
+  font-family: 'Numans', 'Arial', 'sans-serif';
+  font-size: 14px;
+}
