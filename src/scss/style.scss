@@ -27,6 +27,8 @@
 @import 'components/section-box';
 @import 'components/overlay-card';
 @import 'components/input';
+@import 'components/figure-portfolio';
+@import 'components/filternav';
 
 @import 'utilities';
 
@@ -142,4 +144,17 @@
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 1px;
+}
+
+.portfolio-grid {
+  position: relative;
+  width: calc(100% + 30px);
+  margin-left: -15px;
+}
+
+.figure {
+  position: absolute;
+  width: calc(33% - 30px);
+  display: block;
+  margin: 15px;
 }

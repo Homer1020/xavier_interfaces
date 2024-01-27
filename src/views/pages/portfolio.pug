@@ -1,0 +1,54 @@
+extends ../layouts/app
+block enviroments
+  - var headerInitialBG = '#000'
+block content 
+  section.banner.banner--dark.banner--center(style="background-image: url(/images/bg.jpg); padding-bottom: 19rem; padding-top: 26rem;")
+    div
+      h1.text-center.banner__title.banner__title--md.text-white Portafolio
+  section.l-section.section
+    .container
+      .row 
+        .col-md-7 
+          h2.section__title(style="margin-bottom: 2rem") Showcase your Awesome Work
+          p(style="margin-bottom: 5rem;") Holisticly incubate vertical testing procedures through vertical convergence. Authoritatively scale top-line infrastructures vis-a-vis bleeding-edge e-markets. Enthusiastically streamline plug-and-play.
+      nav.filternav#filternav
+        ul.filternav__nav 
+          li.filternav__item 
+            div.filter-param Web Design
+          li.filternav__item 
+            div.filter-param Video
+          li.filternav__item 
+            div.filter-param Logos
+          li.filternav__item 
+            div.filter-param Branding
+      .portfolio-grid 
+        figure.figure.figure-portfolio(data-categories="Web Design, Video")
+          .figure-portfolio__image
+            img.figure-img.img-fluid(src='/images/portfolio/1.jpg' alt='...')
+            .figure-portfolio__links 
+              a.figure-portfolio__link(href="#") Info
+              a.figure-portfolio__link(href="#") Zoom
+          figcaption.figure-caption
+            h3 Clean Device Display #1
+            p Illustrator / Photoshop
+        figure.figure.figure-portfolio(data-categories="Web Design")
+          .figure-portfolio__image
+            img.figure-img.img-fluid(src='/images/portfolio/1.jpg' alt='...')
+            .figure-portfolio__links 
+              a.figure-portfolio__link(href="#") Info
+              a.figure-portfolio__link(href="#") Zoom
+          figcaption.figure-caption
+            h3 Clean Device Display #2
+            p Illustrator / Photoshop
+        figure.figure.figure-portfolio(data-categories="Web Design, Video")
+          .figure-portfolio__image
+            img.figure-img.img-fluid(src='/images/portfolio/1.jpg' alt='...')
+            .figure-portfolio__links 
+              a.figure-portfolio__link(href="#") Info
+              a.figure-portfolio__link(href="#") Zoom
+          figcaption.figure-caption
+            h3 Clean Device Display #1
+            p Illustrator / Photoshop
+block prepend scripts 
+  script(src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js")
+  script(src='https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js')

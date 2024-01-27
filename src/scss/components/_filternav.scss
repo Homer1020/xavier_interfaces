@@ -1,0 +1,46 @@
+.filternav {
+  &__item {
+    div {
+      background-color: transparent;
+      border-width: 1px 1px 1px 1px;
+      border-style: solid;
+      border-color: #cdcdcd;
+      border-radius: 0;
+      color: #888888;
+      font-size: 11px;
+      font-family: Open Sans,sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 30px;
+      margin: 0px 8px 10px 0px;
+      padding: 0px 13px 0px 13px;
+      text-transform: uppercase;
+      transition: color .3s, background-color .3s, font-weight .3s;
+      cursor: pointer;
+      &:hover,
+      &.active {
+        background-color: #101010;
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: #101010;
+        border-radius: 0;
+        color: #fff;
+        font-size: 11px;
+        font-family: Open Sans,sans-serif;
+        font-style: normal;
+        line-height: 30px;
+        margin: 0px 8px 10px 0px;
+        padding: 0px 13px 0px 13px;
+        text-transform: uppercase;
+      }
+      &.active {
+        font-weight: 600;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+}

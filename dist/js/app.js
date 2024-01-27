@@ -184,6 +184,143 @@ $sections.forEach($section => {
 	observer.observe($section)
 })
 
-var grid = new Muuri('.l-grid-blog ', {
-	items: '.item'
+/**
+ * BLOG
+ */
+if(document.querySelector('.l-grid-blog')) {
+	var grid = new Muuri('.l-grid-blog', {
+		items: '.item',
+		visibleStyles: {
+	    opacity: '1',
+	    transform: 'translateY(0)'
+	  }
+	});
+}
+
+window.addEventListener('load', function () {
+  if(document.querySelector('.l-grid-blog')) {
+		refreshMuuriLayout();
+	}
 });
+
+// The best solution for me
+const refreshMuuriLayout = () => {
+	grid.refreshItems().layout(true);
+}
+
+const generatePostTemplate = ({
+	image,
+	tags,
+	title,
+	link,
+	delay
+}) => {
+	const postTemplate = `
+	<div class="item-content" style="transition-delay: ${ delay }s;"">
+	  <a href="${ link }" class="post d-block">
+	    <img src="${ image }" class="post__thumbnail wp-post-image" alt="" onload="refreshMuuriLayout()">
+	    <div class="post__info">
+	      <div class="post__tags">
+	      <a class="tag" href="http://strateps.test/categoria/people/" alt="Ver todo sobre people">people</a> <a class="tag" href="http://strateps.test/categoria/photography/" alt="Ver todo sobre photography">photography</a>        </div>
+	      	<a href="${ link }">
+	          <h3 class="post__title">
+	            ${ title }
+	           </h3>
+	        </a>
+	    </div>
+	  </a>
+	</div>
+	`
+	const el = document.createElement('article')
+	el.classList.add('item')
+	el.innerHTML = postTemplate
+	return el
+}
+
+const showMorePosts = document.getElementById('show_more_posts')
+
+const fetchPosts = async (limit, offset) => {
+	const data = await fetch(`http://strateps.test/wp-json/wp/v2/posts?per_page=${limit}&offset=${offset}&_embed`)
+	const json = await data.json()
+
+	return json
+}
+
+let offset = 6
+
+if(showMorePosts) {
+	showMorePosts.addEventListener('click', async e => {
+		handleDOMLoadMorePosts()
+	})
+}
+
+const handleDOMLoadMorePosts = async () => {
+	showMorePosts.innerHTML = `
+		<span>Cargando publicaciones</span>
+		<div class="spinner-border spinner-border-sm ms-3" role="status">
+		  <span class="sr-only">Loading...</span>
+		</div>
+	`
+
+	const posts = await fetchPosts(3, offset)
+
+	if(!posts.length) {
+		showMorePosts.innerHTML = 'No hay más publicaciones'
+		return null
+	}
+
+	offset += 3
+
+	let delay = 0;
+
+	posts.forEach(post => {
+		const elementPost = generatePostTemplate({
+			image: post._embedded['wp:featuredmedia'].find(el => el.source_url).source_url,
+			link: post.link,
+			title: post.title.rendered,
+			delay,
+		})
+
+		delay += .1
+
+		grid.add(elementPost)
+	})
+	showMorePosts.innerHTML = 'Cargar más publicaciones'
+}
+
+/**
+ * OTHER GRID
+ */
+if(document.querySelector('.archive-grid')) {
+	var archiveGrid = new Muuri('.archive-grid', {
+		items: '.grid-item',
+	});
+}
+
+window.addEventListener('load', function () {
+  if(document.querySelector('.archive-grid')) {
+		archiveGrid.refreshItems().layout(true);
+	}
+});
+
+if(document.querySelector('.portfolio-grid')) {
+	var portfolioGrid = new Muuri('.portfolio-grid', {
+		items: '.figure'
+	});
+}
+
+const filterNav = document.getElementById('filternav')
+
+if(filterNav) {
+	filterNav.addEventListener('click', e => {
+		if(e.target.classList.contains('filter-param')) {
+			filter(e.target.textContent)
+		}
+	})
+}
+
+function filter(param) {
+	portfolioGrid.filter(function (item) {
+		return item.getElement().dataset.categories.includes(param);
+	});
+}
