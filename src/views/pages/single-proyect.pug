@@ -1,0 +1,33 @@
+extends ../layouts/app
+block enviroments
+  - var headerInitialBG = '#fff'
+  - var siteHeaderLight = true
+block content 
+  div(style="margin-top: 10rem")
+    .container
+      img(src="/images/bg.jpg", alt="", style="height: 400px; width: 100%; object-fit: cover;")
+  section.section(style="padding: 7rem 0;")
+    .container
+      .row
+        .col-md-9
+          h2.section__title.section__title--sm.mt-0 Clean Device Display
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ex nulla doloremque odio at aliquam, soluta necessitatibus commodi facere? Odit eveniet at excepturi ab error. Ut cupiditate quam aut temporibus.
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ex nulla doloremque odio at aliquam, soluta necessitatibus commodi facere? Odit eveniet at excepturi ab error. Ut cupiditate quam aut temporibus.
+        .col-md-3
+          .details
+            h2 PROJECT DETAILS
+            p 
+              strong Date: 
+              | 2021/05/01
+            p
+              strong Client:
+              | TreeThemes
+            p
+              strong Skills:
+              | Illustrator / Photoshop
+            a.btn-other Ver proyecto
+              i.fa.fa-link
+
+

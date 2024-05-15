@@ -146,15 +146,48 @@
   letter-spacing: 1px;
 }
 
+.btn-other {
+  border-color: rgb(16, 16, 16);
+  color: rgb(16, 16, 16);
+  background-color: transparent;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 11px;
+  padding-right: 11px !important;
+  font-size: 11px;
+  border-width: 2px;
+  font-weight: 700;
+  border-style: solid;
+  text-transform: uppercase;
+  font-family: 'Numans', 'Arial', 'sans-serif';
+  transition: color .3s, background-color .3s;
+  &:hover {
+    background-color: rgb(16, 16, 16);
+    color: #fff;
+  }
+  i {
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+}
+
 .portfolio-grid {
   position: relative;
   width: calc(100% + 30px);
   margin-left: -15px;
 }
 
-.figure {
+.portfolio-grid .figure {
   position: absolute;
-  width: calc(33% - 30px);
   display: block;
-  margin: 15px;
+
+  @media (min-width: 992px) {
+    width: calc(50% - 30px);
+    margin: 15px;
+  }
+
+  @media (min-width: 1200px) {
+    width: calc(33% - 30px);
+    margin: 15px;
+  }
 }

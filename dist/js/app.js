@@ -321,6 +321,7 @@ if(filterNav) {
 
 function filter(param) {
 	portfolioGrid.filter(function (item) {
+		if(param === 'TODO') return true
 		return item.getElement().dataset.categories.includes(param);
 	});
 }
